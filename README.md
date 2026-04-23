@@ -1,11 +1,11 @@
 # Self-Pruning Neural Network using Learnable Gates
 
-## 🧠 Problem Statement
+## Problem Statement
 Design a neural network that can automatically prune unnecessary connections during training to reduce model complexity while maintaining accuracy.
 
 ---
 
-## ⚙️ Approach
+## Approach
 A custom neural network was implemented using PyTorch.
 
 Each layer uses **learnable gates** applied to weights:
@@ -24,7 +24,7 @@ Different values of λ (lambda) are used to study the pruning effect.
 
 ---
 
-## 🏗️ Model Architecture
+## Model Architecture
 - Input: CIFAR-10 images (32×32)
 - Layers:
   - Fully Connected: 3072 → 128
@@ -35,7 +35,7 @@ Each layer uses a custom **PrunableLinear** module.
 
 ---
 
-## 📊 Results
+## Results
 
 | Lambda | Accuracy (%) | Hard Sparsity (<0.1) | Soft Sparsity (<0.3) | Mean Gate |
 |--------|--------------|----------------------|----------------------|-----------|
@@ -45,7 +45,7 @@ Each layer uses a custom **PrunableLinear** module.
 
 ---
 
-## 📈 Analysis
+## Analysis
 
 - All gates converged to approximately **0.15**
 - Hard sparsity (<0.1) remains **0%**
@@ -62,7 +62,7 @@ This behavior is due to:
 
 ---
 
-## ⚠️ Experimental Constraints
+## Experimental Constraints
 - CPU-only training
 - Reduced dataset size
 - Smaller model
@@ -72,7 +72,7 @@ These constraints limit aggressive pruning but still demonstrate correct behavio
 
 ---
 
-## ✅ Conclusion
+## Conclusion
 The self-pruning neural network was successfully implemented.
 
 Although strong hard pruning was not achieved, the model demonstrates:
@@ -82,7 +82,7 @@ Although strong hard pruning was not achieved, the model demonstrates:
 
 ---
 
-## 📁 Output Files
+## Output Files
 Check the `results/` folder:
 - `results.csv`
 - gate distribution plots
